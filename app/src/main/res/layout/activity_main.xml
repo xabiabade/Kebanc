@@ -22,7 +22,7 @@
         android:ems="10"
         android:id="@+id/editnombre"
         android:layout_alignParentStart="true"
-        android:hint="Nombre y apellido"
+        android:hint="Nombre y apellidos"
         android:layout_below="@+id/textView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
