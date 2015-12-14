@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         nombre=(EditText)findViewById(R.id.editnombre);
         direccion=(EditText)findViewById(R.id.editdirecion);
         telefono=(EditText)findViewById(R.id.edittelefono);
-        sigiente=(Button)findViewById(R.id.sigiente);
+        sigiente=(Button)findViewById(R.id.Siguiente);
 
         sigiente.setOnClickListener(new View.OnClickListener() {
             @Override

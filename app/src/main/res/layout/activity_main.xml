@@ -55,8 +55,8 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Siguiente"
-        android:id="@+id/sigiente"
+        android:text="@string/Siguiente"
+        android:id="@+id/Siguiente"
         android:layout_alignParentEnd="true"
         android:layout_above="@+id/salir"
         android:layout_alignRight="@+id/textView"
@@ -71,8 +71,8 @@
         android:id="@+id/salir"
         android:onClick="Salir"
         android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/sigiente"
-        android:layout_alignStart="@+id/sigiente"
+        android:layout_alignLeft="@+id/Siguiente"
+        android:layout_alignStart="@+id/Siguiente"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 </RelativeLayout>
