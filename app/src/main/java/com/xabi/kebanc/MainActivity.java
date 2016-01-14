@@ -8,28 +8,31 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
-    private EditText nombre,direccion,telefono;
-    private Button sigiente;
+    public EditText nombre, direccion, telefono, apellido;
+    private Button siguiente;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        nombre=(EditText)findViewById(R.id.editnombre);
-        direccion=(EditText)findViewById(R.id.editdirecion);
-        telefono=(EditText)findViewById(R.id.edittelefono);
-        sigiente=(Button)findViewById(R.id.Siguiente);
+        nombre=(EditText)findViewById(R.id.txtNombreMain);
+        apellido=(EditText)findViewById(R.id.txtApellidosMain);
+        direccion=(EditText)findViewById(R.id.txtDireccionMain);
+        telefono=(EditText)findViewById(R.id.txtTelefonoMain);
+        siguiente=(Button)findViewById(R.id.cmdSiguienteMain);
 
-        sigiente.setOnClickListener(new View.OnClickListener() {
+        siguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (nombre.getText().toString().equals("")) {
-                    nombre.setError("Intoduce un Nombre");
+                    nombre.setError("Por favor, introduce tu nombre");
+                } else if(apellido.getText().toString().equals("")) {
+                    telefono.setError("Por favor, introduce tus apellidos");
 
                 } else if (direccion.getText().toString().equals("")) {
-                    direccion.setError("Intoduce una direccion");
+                    direccion.setError("Por favor, introduce una dirección de envío");
                 } else if(telefono.getText().toString().equals("")) {
-                    telefono.setError("Intoduce un telefono");
+                    telefono.setError("Por favor, introduce un teléfono de contacto");
                 }else{
                         LanzarActividad(null);
                     }
@@ -44,10 +47,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     public void LanzarActividad(View V){
-        Intent intent = new Intent(this, Tipos.class);
+        Intent intent = new Intent(this, Comidas.class);
         intent.putExtra("NOMBRE", nombre.getText().toString());
         intent.putExtra("DIRECCION", direccion.getText().toString());
         intent.putExtra("TELEFONO", telefono.getText().toString());
+        intent.putExtra("APELLIDO", apellido.getText().toString());
         startActivityForResult(intent, 1235);
     }
 
