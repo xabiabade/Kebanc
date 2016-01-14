@@ -1,22 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.xabi.kebanc" >
+    package="com.xabi.kebanc">
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
-        <activity android:name=".MainActivity" >
+        android:theme="@style/AppTheme">
+
+        <!--Especificar actividad para la pantalla de bienvenida!-->
+        <activity android:name=".Bienvenida">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Tipos" >
-        </activity>
+
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".Comidas"/>
+        <activity android:name=".Bebidas"/>
+        <activity android:name=".Factura"/>
+
+        <!--Especificar actividad para el pop-up de confirmación de pedido sin regalos!-->
+        <activity
+            android:name=".Mensaje"
+            android:label="KEBANC"
+            android:theme="@style/Theme.AppCompat.Dialog" />
+
+        <!--Especificar actividad para el pop-up de confirmación de pedido con el primer regalo!-->
+        <activity
+            android:name=".Mensaje2"
+            android:label="Enhorabuena"
+            android:theme="@style/Theme.AppCompat.Dialog" />
+
+        <!--Especificar actividad para el pop-up de confirmación de pedido con el segundo regalo!-->
+        <activity
+            android:name=".Mensaje3"
+            android:label="Enhorabuena"
+            android:theme="@style/Theme.AppCompat.Dialog" />
+
     </application>
 
 </manifest>

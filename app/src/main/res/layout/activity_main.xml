@@ -6,24 +6,23 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
 
-    <TextView android:text="Introduce tus datos :" android:layout_width="wrap_content"
+    <TextView android:text="@string/texto_titulo_datos_personales" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="35dp"
-        android:id="@+id/textView"
+        android:textSize="30sp"
+        android:id="@+id/lblTituloMain"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="58dp" />
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/editnombre"
+        android:id="@+id/txtNombreMain"
         android:layout_alignParentStart="true"
-        android:hint="Nombre y Apellidos"
-        android:layout_below="@+id/textView"
+        android:hint="@string/texto_hint_main_nombre"
+        android:layout_below="@+id/lblTituloMain"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -31,48 +30,62 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editdirecion"
-        android:layout_alignParentStart="true"
-        android:hint="Direccion"
-        android:layout_below="@+id/editnombre"
-        android:layout_alignParentLeft="true"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/txtApellidosMain"
+        android:hint="@string/texto_main_hint_apellidos"
+        android:layout_below="@+id/txtNombreMain"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtDireccionMain"
+        android:hint="@string/texto_main_hint_direccion"
+        android:layout_below="@+id/txtApellidosMain"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/txtApellidosMain"
+        android:layout_alignEnd="@+id/txtApellidosMain" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="phone"
         android:ems="10"
-        android:id="@+id/edittelefono"
+        android:id="@+id/txtTelefonoMain"
         android:layout_alignParentStart="true"
-        android:hint="Telefono"
-        android:layout_below="@+id/editdirecion"
+        android:hint="@string/texto_main_hint_telefono"
+        android:layout_below="@+id/txtDireccionMain"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/Siguiente"
-        android:id="@+id/Siguiente"
+        android:id="@+id/cmdSiguienteMain"
         android:layout_alignParentEnd="true"
         android:layout_above="@+id/salir"
-        android:layout_alignRight="@+id/textView"
-        android:layout_toEndOf="@+id/edittelefono"
+        android:layout_alignRight="@+id/lblTituloMain"
+        android:layout_toEndOf="@+id/txtTelefonoMain"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Salir"
+        android:text="@string/texto_main_botoon_salir"
         android:id="@+id/salir"
         android:onClick="Salir"
         android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/Siguiente"
-        android:layout_alignStart="@+id/Siguiente"
+        android:layout_alignLeft="@+id/cmdSiguienteMain"
+        android:layout_alignStart="@+id/cmdSiguienteMain"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+
 </RelativeLayout>
